@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href = "css/style.css" rel = "stylesheet"/>
+    <title>Delete Movie</title>
+</head>
+<body style="display: flex; justify-content: center; align-content: center; flex-direction: column">
+<div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <strong class="me-auto">DELETE MOVIE</strong>
+        <button type="button" class="btn-close ms-2 mb-1" data-bs-dismiss="toast" aria-label="Close">
+            <a aria-hidden="true" href="/"></a>
+        </button>
+    </div>
+    <div class="toast-body">
+        <div class="col-sm-10">
+            <form th:method="delete" action="/delete">
+                <label  class="form-label mt-4" for="delete_id">
+                    Delete by ID:
+                </label>
+                <input class="form-control" type="number" min = "1" name = "delete_id" id="delete_id">
+
+                <input style="margin-top: 40px" class="btn btn-primary" type="submit" value="Delete Movie">
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href = "css/style.css" rel = "stylesheet"/>
+    <title>Edit Movie</title>
+</head>
+<body style="display: flex; justify-content: center; align-content: center; flex-direction: column">
+<div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <strong class="me-auto">EDIT MOVIE</strong>
+        <button type="button" class="btn-close ms-2 mb-1" data-bs-dismiss="toast" aria-label="Close">
+            <a aria-hidden="true" href="/"></a>
+        </button>
+    </div>
+    <div class="toast-body">
+        <div class="col-sm-10">
+            <form th:method="put" action="/edit">
+                <label  class="form-label mt-4" for="delete_id">
+                    MovieID:
+                </label>
+                <input class="form-control" type="number" min = "1" name = "delete_id" id="delete_id">
+                <label  class="form-label mt-4" for="movie_name">
+                    New Name:
+                </label>
+                <input class="form-control" type="text" name = "movie_name" id="movie_name">
+                <label  class="form-label mt-4" for="url">
+                    New Url:
+                </label>
+                <input class="form-control" type="text" name = "url" id="url">
+                <input style="margin-top: 40px" class="btn btn-primary" type="submit" value="Update Movie">
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

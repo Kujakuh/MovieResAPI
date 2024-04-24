@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href = "css/style.css" rel = "stylesheet"/>
+    <title>API Rest con vistas XILFTEN Movies</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">MOVIES API</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/add">Add Movie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/delete">Delete Movie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/edit">Edit Movie</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<h1 style = "justify-content: center">API REST NETFLIX Movies</h1>
+<hr>
+<h3>Get all Movies</h3>
+<p>Para obtener todas las películas usa la url
+    http://localhost:8080/movies </p>
+<h3>Get Movie by id</h3>
+<p>Para obtener una película por id usa la url
+    http://localhost:8080/movies/{id} </p>
+
+<p style = "margin-top: 50px" th:if="${message != null}" th:text="${message}"></p>
+</body>
+</html>
